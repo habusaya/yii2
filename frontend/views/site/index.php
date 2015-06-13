@@ -1,17 +1,39 @@
 <?php
+use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Yii2 Web application สำนักงานสาธารณสุขจังหวัดมุกดาหาร.';
+$this->title = 'Yii2 Web application Jhcis The Gangs.';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
         <h1>ยินดีต้อนรับ</h1>
 
-        <p class="lead">ทดสอบระบบ Yii2 Web application สำนักงานสาธารณสุขจังหวัดมุกดาหาร.</p>
+        <p class="lead">ทดสอบระบบ Yii2 Web application Jhcis The Gangs.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://203.157.172.1">เข้าสู่เว็ปไซต์สำนักงานสาธารณสุขจังหวัดมุกดาหาร</a></p>
+        <p><a class="btn btn-lg btn-success" href="https://www.facebook.com/groups/JHCISTheGangs/">เข้าสู่เว็ปไซต์ Jhcis The Gangs</a></p>
     </div>
-
+    
+    <?php
+    $route1 = Yii::$app->urlManager->createUrl('test/test1');
+    ?>
+    <a href="<?=$route1?>">ไปที่ test1</a>
+    <br>
+  
+   <?php
+    $route1 = Yii::$app->urlManager->createUrl(['test/test2','name'=>'sakarin','lname'=>'habusaya']);
+    ?>
+    <a href="<?=$route1?>">ไปที่ test2</a> 
+    <br>
+    
+    
+    <?=
+    Html::a('ลิงค์แบบที่3', ['test/test1','a'=>'1']);
+    ?>
+    
+    
+    
+    
+    
     <div class="body-content">
 
         <div class="row">
